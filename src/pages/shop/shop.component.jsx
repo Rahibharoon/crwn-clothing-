@@ -4,25 +4,14 @@ import CollectionPreview from '../../components/collection-preview/collection-pr
 class  ShopPage extends React.Component{
     constructor(){
         super();
-
-        this.state = {
-            colletions: SHOP_DATA
-        }
+        this.state = {colletions: SHOP_DATA}
     }
-
     render(){
         const {colletions} = this.state;
         return(
             <div className='shop-page'>
                  {
                       colletions.map(({id, ...otherCollectionProps}) =>(
-                        <CollectionPreview key={id} {...otherCollectionProps}
-                        />
-                      ))
-                 }
-            </div>
-        )
-    }
-}
-
+                        <CollectionPreview key={id} {...otherCollectionProps}/>))}
+            </div>)}}
 export default ShopPage;
